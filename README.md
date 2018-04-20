@@ -24,6 +24,12 @@ The executable python script (script/analyze_aimd.py) has two main functions:
 
 If you use this library, please cite the following papers:
 
+    He, Xingfeng, Yizhou Zhu, Alexander Epstein, and Yifei Mo. "Statistical variances 
+    of diffusional properties from ab initio molecular dynamics simulations." 
+    npj Computational Materials 4, no. 1 (2018): 18.
+    
+http://dx.doi.org/10.1038/s41524-018-0074-y
+
     He, Xingfeng, Yizhou Zhu, and Yifei Mo. "Origin of fast ion diffusion in super-ionic 
     conductors." Nature communications 8 (2017): 15893.
     
