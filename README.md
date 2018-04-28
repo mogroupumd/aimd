@@ -40,12 +40,6 @@ http://dx.doi.org/10.1038/ncomms15893
     
 http://dx.doi.org/10.1021/cm203303y
 
-    Ong, Shyue Ping, Yifei Mo, William Davidson Richards, Lincoln Miara, Hyo Sug Lee, and 
-    Gerbrand Ceder. "Phase stability, electrochemical stability and ionic conductivity of 
-    the Li 10±1 MP 2 X 12 (M= Ge, Si, Sn, Al or P, and X= O, S or Se) family of superionic 
-    conductors." Energy & Environmental Science 6, no. 1 (2013): 148-156.
-
-http://dx.doi.org/10.1039/C2EE23355J 
 
     Ong, Shyue Ping, William Davidson Richards, Anubhav Jain, Geoffroy Hautier, Michael Kocher, 
     Shreyas Cholia, Dan Gunter, Vincent L. Chevrier, Kristin A. Persson, and Gerbrand Ceder. 
