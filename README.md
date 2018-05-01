@@ -48,7 +48,7 @@ http://dx.doi.org/10.1021/cm203303y
 
 https://doi.org/10.1016/j.commatsci.2012.10.028
 
-## Install and testing steps
+## Install and test steps
 
 1. Install all dependency and this library
     
@@ -102,6 +102,14 @@ call it from terminal and read the documentations:
     ~1.08 mS/cm, Ea is ~0.258 eV +- 0.017 eV. If your x11 windows settings are correct or you are at
     local computer, you will have a plot window pop up to show the arrhenius relationship for cmd with
     -plot option.
+
+## Standalone executable binary
+
+We also generated standalong executable binary file for script/analyze_aimd.py, which can be found at the release page: 
+https://github.com/mogroupumd/aimd/releases . The binary file included Python interpreter and all dependencies required 
+by the analyze_aimd.py. Thus the user can run the packaged script without installing a Python interpreter 
+or any other modules. The user documentations is same as in the https://github.com/mogroupumd/aimd#install-and-testing-steps
+
 
 ## License
 
