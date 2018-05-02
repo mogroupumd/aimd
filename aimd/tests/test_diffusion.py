@@ -33,6 +33,9 @@ class DiffusivityAnalyzerTest(unittest.TestCase):
         self.assertAlmostEqual(summary_info['conversion_factor'], 7675326.58284, places=5)
         self.assertAlmostEqual(summary_info['temperature'], 1500, places=5)
         self.assertAlmostEqual(summary_info['conductivity'], 583.45915619213463, places=5)
+        self.assertAlmostEqual(summary_info['drift_maximum'][0], 0.14701786, places=5)
+        self.assertAlmostEqual(summary_info['drift_maximum'][1], 0.11887803, places=5)
+        self.assertAlmostEqual(summary_info['drift_maximum'][2], 0.04883125, places=5)
 
 
 if __name__ == "__main__":
