@@ -88,6 +88,13 @@ def Analyze_VASP_MD(args):
     print("Start run: {}, end run: {}".format(vasprun_dirs[0], vasprun_dirs[-1]))
     print("=" * 40)
 
+    # If drift larger than 3 angstrom, raise warning
+    if 'drift_maximum' in summary_info.keys():
+        if max(summary_info['drift_maximum']) > 3:
+            print("{} WARNING {}".format('='*20, '='*20))
+            print("The entire cell has significant drift, please check the MD data")
+            print("Maximum drift distance in xyz (Angstrom): {}".format(summary_info['drift_maximum']))
+            print("{} WARNING {}".format('=' * 20, '=' * 20))
     # results table
     header_result = ("Parameter", "Value")
     result_table = PrettyTable(header_result)
@@ -97,7 +104,7 @@ def Analyze_VASP_MD(args):
             result_table.add_row([k, str(v)])
     result_table.add_row(['composition', str(da.structure.composition)])
     print("Results table: ")
-    print("Diffusivity unit: cm^2/s, Conductivity unit: mS/cm")
+    print("Diffusivity unit: cm^2/s, Conductivity unit: mS/cm, Drift unit: Angstrom")
     print(result_table.get_string(sortby='Parameter'))
     print(citing_info)
     # whether output msd
