@@ -161,6 +161,8 @@ class DiffusivityAnalyzer(MSONable):
         self.structure = structure
         self.indices = indices
         self.framework_indices = framework_indices
+        self.drift = drift
+        self.drift_maximum = np.max(np.abs(drift), axis=1)[0] # the maximum drift vector of the framework ions, shape is (3,)
         self.disp = displacements
         self.displacements_final_diffusion_ions = displacements_final_diffusion_ions
         self.specie = specie
@@ -208,7 +210,9 @@ class DiffusivityAnalyzer(MSONable):
              "msd_component": self.msd_component,
              "dt": self.dt,
              "time_intervals_number": self.time_intervals_number,
-             "spec_dict": self.spec_dict}
+             "spec_dict": self.spec_dict,
+             "drift_maximum": self.drift_maximum
+              }
         oxi = False
         if oxidized_specie:
             df_sp = Specie.from_string(oxidized_specie)
