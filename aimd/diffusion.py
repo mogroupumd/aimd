@@ -211,7 +211,8 @@ class DiffusivityAnalyzer(MSONable):
              "dt": self.dt,
              "time_intervals_number": self.time_intervals_number,
              "spec_dict": self.spec_dict,
-             "drift_maximum": self.drift_maximum
+             "drift_maximum": self.drift_maximum,
+             "max_framework_displacement": self.max_framework_displacement
               }
         oxi = False
         if oxidized_specie:
