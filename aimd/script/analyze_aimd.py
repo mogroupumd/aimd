@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python2.7
 
 # coding: utf-8
 # Copyright (c) MoGroup at UMD.
@@ -94,6 +94,13 @@ def Analyze_VASP_MD(args):
             print("{} WARNING {}".format('='*20, '='*20))
             print("The entire cell has significant drift, please check the MD data")
             print("Maximum drift distance in xyz (Angstrom): {}".format(summary_info['drift_maximum']))
+            print("{} WARNING {}".format('=' * 20, '=' * 20))
+    # If max framework displacement larger than 5 angstrom, raise warning
+    if 'max_framework_displacement' in summary_info.keys():
+        if summary_info['max_framework_displacement'] > 5:
+            print("{} WARNING {}".format('=' * 20, '=' * 20))
+            print("There are significant movement for framework ions, may be melt. pLease check")
+            print("Maximum framework_displacement (Angstrom): {}".format(summary_info['max_framework_displacement']))
             print("{} WARNING {}".format('=' * 20, '=' * 20))
     # results table
     header_result = ("Parameter", "Value")
